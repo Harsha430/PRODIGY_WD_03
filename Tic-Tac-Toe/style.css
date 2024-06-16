@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --slider-position: 0px;
+}
+body {
+  background-image: linear-gradient(
+    to left top,
+    #5d27d8,
+    #8a28ca,
+    #a631bd,
+    #ba40b2,
+    #c752a9,
+    #ba5195,
+    #aa5083,
+    #9a5073,
+    #723d54,
+    #4c2a37,
+    #29191e,
+    #000000
+  );
+  height: 100vh;
+  overflow: hidden;
+}
+.main-head {
+  position: relative;
+  left: 7%;
+  top: 20%;
+  color: white;
+  letter-spacing: 1px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.declare-winner {
+  position: relative;
+  top: 5%;
+  right: -63%;
+  color: rgba(193, 186, 186, 0.906);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 30px;
+  transition: all 2s;
+}
+.turn-box {
+  position: relative;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  height: 180px;
+  border: 4px solid #ff9671;
+  border-radius: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+  font-size: 32px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.turn-box .slider {
+  background-color: #ff9671;
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  top: var(--slider-position);
+  left: -20px;
+  z-index: -1;
+  transition: top 0.3s ease-in-out;
+}
+
+.game-box {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  display: grid;
+  grid-template-columns: 3fr 3fr 3fr;
+  gap: 30px;
+  width: 450px;
+  height: 450px;
+  justify-content: center;
+}
+.icons {
+  border: 2px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  font-size: 32px;
+  color: #fff;
+  font-size: 50px;
+  transition: 0.4s;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.icons:hover {
+  background-color: #000000;
+}
+.winner {
+  text-decoration: line-through;
+  color: #ff0000;
+}
+button {
+  position: absolute;
+  bottom: 20%;
+  left: 18%;
+  background-color: transparent;
+  border: none;
+  font-size: 17px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  border: 2px solid #29191e;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fbeaff;
+  cursor: pointer;
+}
